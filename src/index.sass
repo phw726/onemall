@@ -1,0 +1,111 @@
+.header 
+  display: flex
+  background-color : lightgray
+  justify-content: space-between
+  border-bottom: 1px solid #f2f2f2
+  padding: 10px 40px
+  min-height: 40px
+  align-items: center
+  justify-content: center
+
+
+.footer 
+  display: flex
+  background-color : gray
+  justify-content: space-between
+  border-bottom: 1px solid #f2f2f2
+  padding: 10px 40px
+  min-height: 40px
+  align-items: center
+  justify-content: center
+
+
+// home (page > index.tsx) //
+.mainpage 
+  display : block
+  background-color : beige
+  width: auto
+  height: auto
+  padding: 10px 40px 10px 40px
+  justify-content: center
+  align-items: center
+  text-align: center
+
+  
+  &-name
+    font-weight : 700
+    font-size : 30px
+    justify-content: center
+    align-items: top
+    margin-bottom: 10px
+    margin-top: 10px
+
+
+  &-nav a
+    display: flex
+    font-weight : 700
+    align-items: top
+    margin : 40px 0 20px 0
+    color : darkgray
+    text-decoration : none
+
+    &:hover, &:focus
+      color : black
+
+
+
+
+////page > products > indext.tsx///
+.productslist
+  display: block
+  position : relative
+  align-items: center
+  justify-content: center
+  border : 1px solid lightgray
+  width: 100%
+  height: auto
+  padding-top : 20px
+  margin-bottom : 20px
+  overflow: hidden
+
+  .span
+   display : block
+   font-weight : 700
+   margin-top : auto
+   margin-bottom : 40px
+   
+
+
+
+  .product 
+    display: grid
+    margin: 20px 40px 20px 40px
+    grid-template-columns: repeat(auto-fill, 14rem)
+    gap : 1rem
+    align-items : center
+    justify-content : space-evenly
+
+
+    .productdetail
+     display: flex
+     background-color: lightgreen
+     margin-right : auto
+     margin-left : auto
+     border : 1px solid green
+     width : 220px
+     height : 200px
+     align-items : center
+     justify-content : center
+     opacity: .6
+     cursor: pointer
+
+     &:hover, &:focus
+       opacity: 1
+
+     
+
+   
+    
+
+  
+

@@ -1,23 +1,426 @@
+
+  
+$headerColor : #F6F5F0
+$grayText : #CCC
+$color-gold : #D9AA8A
+$color-lightgold : #e3d2ae
+$color-gray : #9b9999
+$color-lightgray:#e5e5e5
+$color-darkgray : #656565
+$color-footer:#272727
+$color-green: #669900
+$color-lightgreen :  #64a70b
+$color-black:#2C2A29
+$color-white: #fff
+$color-semiWhite:#fdfafa
+
+
+// box-shadow: 4px 4px 10px rgba(0,0,0,.15);
+
+body 
+  background-color: $color-semiWhite
+
+
+
+
+  
+///뒤로가기///
+.utils--prev
+    display: flex
+    margin: 20px 0 0 50px
+    color : $color-green
+    font-size: 24px
+    cursor: pointer
+
+    & span
+      font-size: 12px
+      align-content: center
+      margin-left: 4px
+
+    &:hover, &:focus
+        color : $color-lightgold
+        transition: .7s 
+
+
+
+///HEADER 헤더 HEADER 헤더 HEADER 헤더 HEADER 헤더/// 
+
 .header 
   display: flex
-  background-color : lightgray
   justify-content: space-between
-  border-bottom: 1px solid #f2f2f2
-  padding: 10px 40px
+  padding: 10px 40px 
   min-height: 40px
   align-items: center
-  justify-content: center
+  justify-content: space-between
+  // background-color: $headerColor
+  border-bottom: 1px solid $color-lightgray
+
+  &--logo 
+    display: flex
+    font-size: 27px
+    font-weight: 700
+    cursor : pointer
+    color: $color-green
+    font-style: italic
+    text-shadow: 3px 3px $color-lightgold
+    text-decoration: none
 
 
+  &--menus 
+    display: flex
+    align-items: center
+
+
+    &--wrapped
+      display: flex
+      gap: 10px
+      font-size: 12px
+      flex-wrap: wrap
+      
+
+      &--menu
+        cursor : pointer
+        color : $color-darkgray
+        text-align: center
+        justify-items: center
+        font-weight: 500
+        text-decoration: none
+
+
+        &:hover, &:focus 
+          font-weight: 500
+          color: $color-footer
+          text-shadow: 1px 1px $color-lightgray
+          
+      
+
+    ///검색창 SERARCH/// 
+    &--search
+      display: flex
+      gap : 5px
+      margin-right: 8px
+      flex-wrap: wrap
+
+      &--icon
+        color : $color-green
+        margin-right: 3px
+      
+        
+    & input
+        display: flex
+        width: 35px
+        font-size: 12px
+        color: $color-black
+        overflow: hidden
+        border : 1px solid $color-lightgreen
+        border-radius: 4px
+        padding : 2px 2px 2px 4px
+
+                    
+        &::placeholder
+          color : $color-gray
+          font-size: 11px
+          opacity: 0
+          padding-left: 2px
+
+        &:hover, &:focus, &:active
+          width : 155px
+          transition: 1s
+          border: 1px solid $color-green
+          outline: none
+          opacity: 1
+
+          &::placeholder
+            opacity: 1
+            transition: 1.7s
+
+
+
+    
+///Footer 푸터 Footer 푸터 Footer 푸터 Footer 푸터///
 .footer 
-  display: flex
-  background-color : gray
-  justify-content: space-between
-  border-bottom: 1px solid #f2f2f2
+  background-color : $color-footer
+  border-top: 1px solid #333
   padding: 10px 40px
   min-height: 40px
   align-items: center
   justify-content: center
+  display: block 
+
+
+  & .inner 
+    padding: 40px 20px 40px 20px
+
+  & .awards 
+    margin-bottom: 20px
+
+
+  & .introduce
+    display: flex
+    border-top: 1px solid #3d3c3c
+    justify-content: center
+    margin-top: 50px
+    padding-top: 40px
+    margin-bottom: 30px
+    gap : 60px
+
+    &--btn 
+      border : 2px solid $color-lightgray
+      border-radius: 5px
+      padding: 10px
+      font-size: 20px
+  
+       
+    & a
+      color : $grayText
+      text-decoration: none
+      font-size: 14px
+
+      &:hover, &:focus
+        color : $color-white
+        font-weight: 700
+        background-color: $color-footer
+        border : 2px solid $color-lightgreen
+        text-shadow: 1px 1px $color-black
+        box-shadow: 2px 2px #141414
+        transition: .7s
+
+  & .menu
+    display: flex
+    justify-content: center
+    gap : 25px
+    padding-top: 10px
+    
+    & li 
+      position: relative
+
+    & .green 
+      color:$color-green
+
+    &::before
+        width: 3px
+        height: 3px
+        background-color: #555
+        position: absolute
+        top: 0
+        bottom: 0
+        right: -1px
+        margin: auto
+    & a
+      color : $grayText
+      text-decoration: none
+      font-size: 11px
+        
+
+       ////스와이프 화살표////
+  & .swiper-button-prev, & .swiper-button-next
+    width: 38px
+    height: 38px
+    outline: none
+    border-radius: 50%
+    border: none
+    color: #fff
+    position: absolute
+    top: 0
+    bottom: 0
+    margin: auto
+    opacity: .2
+    cursor: pointer
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: .4s
+
+  & .swiper-button-prev:hover, & .swiper-button-next:hover
+    background-color: #fff
+    color: #333
+
+
+  & .info 
+    color : $grayText
+    font-size: 11px
+    padding-bottom: 45px
+    text-align: center
+    display: block
+    justify-content: space-between
+
+    & span
+      display: inline-block
+      // justify-content: space-between
+      margin : 5px
+      padding: 2px 8px 2px 1px
+      border-right: 1px solid #3d3c3c
+
+      &:last-child
+        border-right: none
+    
+
+  & .copyright
+    display: block
+    padding : 40px 20px 40px 20px
+    margin: 0 20px 0 20px
+    color : $grayText
+    font-size: 12px
+    border-top: 1px solid #3d3c3c
+    text-align: center
+
+
+////Notice 공지사항 Notice 공지사항 Notice 공지사항////
+.notice
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 30px
+  margin: 50px 40px 40px 40px
+  font-size: 36px
+  font-weight: 700
+  align-items: center
+  font-style: italic
+  text-shadow: 1px 1px $color-gray
+
+  &--list 
+    padding: 40px 20px 40px 20px
+    margin : 40px 
+    max-width: 680px
+    line-height: 24px
+    min-height: 90vh
+    text-align: left
+    margin:0 auto
+    // background-color: $color-white
+    // border:1px solid $color-black
+
+    & .postbox
+      padding-top: 24px
+      padding-bottom:30px
+      border-top:1px solid $color-lightgray
+
+      & .post--profile-box
+          display: flex
+          gap: 8px
+          flex-direction: row-reverse
+          align-items: center
+          margin-bottom: 14px
+
+      & .post--profile--detail
+          display: flex
+          align-items: center
+          justify-items: space-between
+          gap: 6px
+
+      & .post--profile
+          width: 30px
+          height: 30px
+          background-color: $color-lightgray
+          border-radius: 50%
+
+      & .post--date, .post--authorname
+        color:$color-gray
+        font-size: 12px
+    
+    & .post--title
+      font-size: 20px
+      font-weight: 600
+      color: $color-black
+      margin-left: 0
+      margin-right: auto
+    
+    & .post--text
+      margin-bottom: 10px
+
+    & .post--show
+      display: inline-block
+      float: right
+
+      &:hover, &:focus
+        color : $color-green
+
+    & a 
+      text-decoration: none
+      color: $color-darkgray
+      font-size: 12px
+      
+          
+  ////Notice Detail Page 공지사항 상세페이지///
+
+
+.notice--detail
+  margin: 20px 40px 40px 40px
+  display: flex
+
+  & .post--text
+    margin-bottom: 10px
+    font-size: 14px
+    line-height: 20px
+    padding-top: 20px
+
+  & .notice--post--detail
+    justify-content: center
+    align-items: center
+    padding: 30px
+    font-size: 12px
+    align-items: center
+    width: 100%
+    height: 100%
+
+    & .post--title
+      font-size: 23px
+      font-weight: 600
+      color: $color-black
+      margin-bottom: 20px
+
+      line-height:30px
+
+    & .post--profile-box
+      display: flex
+      justify-content: space-between
+      border-top : 1px solid $color-lightgray
+      border-bottom : 1px solid $color-lightgray
+      
+      & .post--date
+        color:$color-darkgray
+        text-align: center
+        align-content: center
+        font-size: 12px
+
+      & .post--profile--detail
+        display: flex
+        gap: 8px
+        align-items: center
+        margin-top:14px
+        margin-bottom: 20px
+        font-size: 10px
+
+        & .post--profile
+          width: 30px
+          height: 30px
+          background-color: $color-lightgray
+          border-radius: 50%
+
+        & .post--authorname
+          display: flex
+          font-size: 12px
+          
+
+      
+        
+
+    
+    
+
+  
+
+  
+
+
+
+
+  
+  
+
+
+  
+
+
 
 
 // home (page > index.tsx) //
@@ -74,8 +477,6 @@
    margin-top : auto
    margin-bottom : 40px
    
-
-
 
   .product 
     display: grid

@@ -1,13 +1,11 @@
 import Footer from 'src/components/Footer';
 import Header from 'src/components/Header';
-import SignUpForm from 'src/components/SignUpForm';
 
-export default function SignUpPage() {
+export default function CartPage() {
   return (
     <>
       <Header />
-      회원가입 페이지
-      <SignUpForm />
+      장바구니 페이지
       <Footer />
     </>
   );

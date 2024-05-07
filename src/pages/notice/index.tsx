@@ -1,13 +1,12 @@
 import Footer from 'src/components/Footer';
 import Header from 'src/components/Header';
-import SignUpForm from 'src/components/SignUpForm';
+import Notice from 'src/components/Notice';
 
-export default function SignUpPage() {
+export default function NoticePage() {
   return (
     <>
       <Header />
-      회원가입 페이지
-      <SignUpForm />
+      <Notice />
       <Footer />
     </>
   );
